@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: medium;
+    }
+
+    .imgcaption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Times New Roman', Times, serif;
+      font-size: x-large;
+      color: white
+    }
+
+
+    .thumbnail {
+      position: relative;
+      display: inline-block;
+      height: 50%;
+      max-width: 100%;
+
+    }
+
+    .caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Style the top navigation bar */
+    .navbar {
+      display: flex;
+      background-color: #240D65;
+    }
+
+    /* Style the navigation bar links */
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    /* Change color on hover */
+    .navbar a:hover {
+      background-color: #EA0AAD;
+      color: black;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Create two unequal columns that sits next to each other */
+    /* Sidebar/left column */
+    .side {
+      flex: 30%;
+      background-color: #f1f1f1;
+      padding: 28.5px;
+      height: 30%;
+      background-color: #ecb7bf;
+      color: black;
+    }
+
+    /* Main column */
+    .main {
+      flex: 70%;
+      background-color: burlywood;
+      padding: 20px;
+      height: 30%;
+    }
+
+    /* Fake image, just for this example */
+    .aboutusimag {
+      width: 100%;
+      padding: 20px;
+      height: 100%;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: #240D65;
+    }
+/* Create four equal columns that sits next to each other */
+    .column {
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media (max-width: 800px) {
+      .column {
+        flex: 100%;
+        max-width:100%;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .orderclass {
+        max-width:100%;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+    .captionforflavour {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    
+    
+    .orderclass
+    {
+      /* margin-left: auto;
+      margin-right: auto;
+      width:100%;
+     padding:20px; */
+     display: table;
+   width: 100%;
+    }
+    #order
+    {
+      display: table-cell;
+   text-align: center;
+   vertical-align: middle;
+    }
+
+    /*Form CSS*/
+    input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color:indigo;
+  color: white;
+  /* padding: 12px 20px; */
+  padding:15px 25px;
+  border:none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  /* align-items: center; */
+  width: 25%;
+  margin-right: 80%;
+  margin-left: 0;
+}
+
+
+input[type=submit]:hover {
+  background-color:seagreen;
+}
+
+.container {
+  border-radius: 5px;
+  background-color:darksalmon;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <div style="background: #240D65  ;padding:5px;color:white;">
+    <h3 style="text-align: center;">Smiles's and Scoops</h3>
+  </div>
+
+  <!-- Image -->
+  <div class=flex-container>
+    <div class="thumbnail">
+      <img src="C:\Users\nisha\Documents\VsCode\RespImages\Header1.jpg" alt="Appreciate" width="100%" height="50%">
+      <div class="caption">
+        <h1>Smiles's and Scoop</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="#aboutlink">About Us</a>
+    <a href="#flavours">Flavours</a>
+    <a href="#orderform">Place Order</a>
+    <a href="#contactus">Contact Us</a>
+  </div>
+
+  <!-- The flexible grid (content) -->
+  <div class="row">
+    <div class="side" id="aboutlink">
+      <h2>About Us</h2>
+      <p>We’re here to add a little extra sweetness to your day. The Ice Cream Shop is a virtual restaurant and new way
+        to order your favorite ice cream brands right
+        to your front door. Available on all your favorite delivery apps including Postmates, DoorDash, Uber Eats, and
+        GrubHub,
+        The Ice Cream Shop features fan-favorite products from beloved ice cream brands Ben & Jerry’s, Talenti, Magnum,
+        Breyers and Good Humor.</p>
+      <!-- <div class="aboutusimag">
+        <img src="RespImages/about3.jpg" height="100%" width="100%">
+      </div> -->
+
+    </div>
+    <div class="main">
+      <h2 style="text-align: center;">Flavours Available</h2>
+      <div class="row " id="flavours">
+
+        <div class="column">
+          <img src="RespImages/vennilascoop1.jpg" style="width:100%" height="100%">
+            
+        </div>
+
+        <div class="column">
+          <img src="RespImages/strawberryscoop1.jpg" style="width:100%" height="100%">
+
+        </div>
+
+        <div class="column">
+          <img src="RespImages/chocoscoop1.jpg" style="width:100%" height="100%">
+        </div>
+
+        <div class="column">
+          <img src="RespImages/pistascoop1.jpg" style="width:100%" height="100%">
+        </div>
+      </div>
+      
+      
+    </div>
+    
+  </div>
+  <div class="container" id="orderform">
+    <h1 style="text-align:center;">Place Your Order</h1>
+    <form action="#">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Name:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="firstname" placeholder="Enter your Name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Mobile Number:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="lastname" placeholder="Enter Your Mobile Number">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="address">Address</label>
+        </div>
+        <div class="col-75">
+          <textarea id="address" name="address" placeholder="Enter Your Address" style="height:100%;resize: none;" ></textarea>
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="icecream">Choose Ice Cream</label>
+      </div>
+      <div class="col-75">
+        <select id="icecream" name="icecream">
+          <option value="">----Select----</option>
+          <option value="vennila">Vennila Family Pack</option>
+              <option value="strawberry">StrawBerry Family Pack</option>
+              <option value="chocolate">Chocolate Family Pack</option>
+              <option value="pista">Pista Family Pack</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="quantity">Quantity</label>
+      </div>
+      <div class="col-75">
+        <select id="quantity" name="quantity">
+          <option value="">----Select----</option>
+          <option value="one">1</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="five">5</option>
+              <option value="six">6</option>
+              <option value="seven">7</option>
+              <option value="eight">8</option>
+              <option value="nine">9</option>
+              <option value="ten">10</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="price">Price:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="price" name="price">
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+  </div>
+  <!-- Footer -->
+  <div class="footer" id="contactus" style="color: white; text-align: center;">
+    <h1>Address</h1>
+    <p>Address: 253, next to NaradaGana Sabha, TTK Road, Alwarpet.
+      Contact Number: 876543217</p>
+    <p>All Right reserved by &copy;Smile'sAndScoopsIceCreams</p>
+  </div>
+
+</body>
+
+</html>
